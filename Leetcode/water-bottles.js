@@ -11,6 +11,7 @@ const numWaterBottles = function (numBottles, numExchange) {
   while (whatWeHave >= numExchange) {
     division = whatWeHave / numExchange
     bottle = whatWeHave % numExchange
+    remainder = division - bottle
     total = bottle + remainder
     whatWeHave = total
     drink += total
