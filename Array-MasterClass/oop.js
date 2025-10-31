@@ -25,10 +25,29 @@ class MyFirstClassWithJavascript {
     for (let i = 0; i < this.length; i++) {
       this.data[i] = this.data[i + 1]
     }
-    
+
     delete this.data[this.length - 1]
     this.length--
     return { data: this.data, 'deleted data': firstItem }
+  }
+
+  delete(index) {
+    for (let i = index; i < this.length; i++) {
+      this.data[i] = this.data[i + 1]
+    }
+    delete this.data[this.length - 1]
+    this.length--
+    return this.data
+  }
+
+  reservse(index){
+    const string = this.data[index]
+    const newString = ''
+    for (let i = string.length - 1; i = 0; i--) {
+      newString.push(string[i])
+      console.log(string[i])
+    }
+    return newString
   }
 }
 
@@ -37,10 +56,16 @@ manMadeArray.push('I am Tepy, I am 21 years old')
 manMadeArray.push('I am a Full-Stack Developer')
 manMadeArray.push('I am a year four student!')
 
+// console.log(manMadeArray.data)
+// console.log(manMadeArray.delete(0))
+console.log(manMadeArray.data)
+console.log(manMadeArray.reservse(1))
 console.log(manMadeArray.data)
 
-console.log(manMadeArray.shift())
-console.log(manMadeArray.data)
+
+
+// console.log(manMadeArray.shift())
+// console.log(manMadeArray.data)
 
 // console.log(manMadeArray)
 // console.log('-0-----------')
