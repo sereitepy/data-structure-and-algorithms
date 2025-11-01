@@ -10,9 +10,9 @@ function tepySolution(string) {
 tepySolution('Sereitepy Or')
 
 function instructorSolution(string) {
-  string.split('').reverse().join('') // idk why it doesn't work
-  console.log(string)
+  const reversed = string.split('').reverse().join('')
+  console.log(reversed)
   return string
 }
 
-instructorSolution('Hello')
+instructorSolution('Hellooo.!')
